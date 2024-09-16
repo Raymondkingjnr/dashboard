@@ -81,7 +81,7 @@ const services = [
 
 const Service = () => {
   return (
-    <div className=" flex flex-col justify-between py-[0.6rem] px-1 md:px-5">
+    <div className=" flex flex-col justify-between py-[0.6rem] px-2 md:px-5">
       <main className="grid md:grid-cols-3 lg:grid-cols-3 gap-3 w-full">
         {balance.map((data, index) => (
           <div key={index}>

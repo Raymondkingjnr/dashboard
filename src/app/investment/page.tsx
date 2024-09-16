@@ -61,7 +61,7 @@ const investment = [
 
 const Investments = () => {
   return (
-    <div className=" py-[0.6rem] px-1 md:px-5">
+    <div className=" py-[0.6rem] px-2 md:px-5">
       <div>
         <main className="grid md:grid-cols-3 lg:grid-cols-3 gap-3 w-full">
           {balance.map((data, index) => (

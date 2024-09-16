@@ -16,42 +16,60 @@ import {
   DepositIcon,
   PaypalIcon,
 } from "@/assests/icons/deposit";
+import {
+  BaggageClaim,
+  CreditCard,
+  Home,
+  PiggyBankIcon,
+  SaveAll,
+  Send,
+  Settings2Icon,
+  User,
+  WrenchIcon,
+} from "lucide-react";
 
 export const sideMenu = [
   {
     text: "DashBoard",
     route: "/",
     icon: <HomeIcon />,
+    mobileIcon: <Home />,
   },
   {
     text: "Transaction",
     route: "/transaction",
     icon: <TransfareIcon />,
+    mobileIcon: <Send />,
   },
   {
     text: "Account",
     route: "/account",
     icon: <UserIcon />,
+    mobileIcon: <User />,
   },
   {
     text: "Investment",
     route: "/investment",
     icon: <InvestmentIcon />,
+    mobileIcon: <PiggyBankIcon />,
   },
   {
     text: "credit card",
     route: "/credit-card",
     icon: <CreditCardIcon />,
+    mobileIcon: <CreditCard />,
   },
   {
     text: "loans",
     route: "/loans",
     icon: <LoanIcon />,
+    mobileIcon: <BaggageClaim />,
   },
   {
     text: "service",
     route: "/service",
     icon: <ServiceIcon />,
+    mobileIcon: <WrenchIcon />,
   },
   // {
   //   text: "My Previlages",
@@ -62,6 +80,7 @@ export const sideMenu = [
     text: "settings",
     route: "/settings",
     icon: <SettingsIcon />,
+    mobileIcon: <Settings2Icon />,
   },
 ];
 

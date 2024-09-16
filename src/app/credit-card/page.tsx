@@ -66,7 +66,7 @@ const settings = [
 
 const CreditCard = () => {
   return (
-    <div className=" py-[1rem] px-1 md:px-5">
+    <div className=" py-[1rem] px-2 md:px-5">
       <main>
         <h2 className=" headerText">My Cards</h2>
         <div className="  grid lg:grid-cols-3 md:grid-cols-2 w-full gap-x-5 gap-y-7 mt-4 ">
@@ -96,7 +96,7 @@ const CreditCard = () => {
             {investment.map((data, index) => (
               <div
                 key={index}
-                className=" flex justify-between items-center rounded-3xl bg-white p-4"
+                className=" flex justify-between items-center rounded-3xl bg-white py-3 px-4"
               >
                 <span className=" flex gap-4 items-center  md:w-[270px]">
                   {data.icon}

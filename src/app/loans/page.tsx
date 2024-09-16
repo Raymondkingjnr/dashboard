@@ -42,7 +42,7 @@ const account = [
 
 const Loans = () => {
   return (
-    <div className=" py-[1rem] px-1 md:px-5">
+    <div className=" py-[1rem] px-2 md:px-5">
       <main className=" grid md:grid-cols-3 lg:grid-cols-4 gap-5">
         {account.map((data, index) => (
           <div key={index}>

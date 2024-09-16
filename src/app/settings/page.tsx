@@ -21,7 +21,7 @@ const Settings = () => {
 
   return (
     <div>
-      <main className=" py-6 max-h-[700px] px-8 my-12 grid mx-[4rem]  bg-gray-50">
+      <main className=" py-6 px-2 md:px-8 md:my-12 grid md:mx-[4rem] bg-gray-50">
         <div className=" flex gap-5 items-center">
           <span
             className=" relative cursor-pointer hover:text-main_primary transition-all duration-200 text-light_blue "
@@ -122,7 +122,7 @@ const Settings = () => {
                   <Input placeholder="22/90" className=" w-full" />
                 </div>
                 <div>
-                  <p className=" pb-2 font-medium text-base">Address</p>
+                  <p className="pb-2 font-medium text-base">Address</p>
                   <Input
                     placeholder="San Jose, California, USA"
                     className=" w-full"
@@ -138,7 +138,7 @@ const Settings = () => {
                   />
                 </div>
                 <div>
-                  <p className=" pb-2 font-medium text-base">City</p>
+                  <p className="pb-2 font-medium text-base">City</p>
                   <Input placeholder="San Jose" className=" w-full" />
                 </div>
                 <div>
@@ -164,8 +164,8 @@ const Settings = () => {
         {/* PREFERENCE */}
         {currentNav === "Preferences" ? (
           <>
-            <main className=" pt-[4rem]">
-              <form className=" w-full grid gap-x-4 gap-y-6 md:grid-cols-2   ">
+            <main className="pt-[4rem]">
+              <form className="w-full grid gap-x-4 gap-y-6 md:grid-cols-2">
                 <div>
                   <p className=" pb-2 font-medium text-base">Currency</p>
                   <Input placeholder="USD" className="w-full" />
@@ -178,7 +178,7 @@ const Settings = () => {
                   />
                 </div>
               </form>
-              <div className=" pt-[4rem]">
+              <div className="pt-[4rem]">
                 <h2 className=" headerText">Notification</h2>
                 <main className=" flex flex-col gap-8 pt-4">
                   <span className=" flex items-center gap-4">
@@ -209,7 +209,7 @@ const Settings = () => {
                       onChange={setAccountOrder}
                       style={{ backgroundColor: accountOrder ? "#16DBCC" : "" }}
                     />
-                    <p className=" font-medium text-base text-light_blue">
+                    <p className="font-medium text-base text-light_blue">
                       There are recommendation for my account
                     </p>
                   </span>
@@ -230,8 +230,8 @@ const Settings = () => {
 
         {currentNav === "Security" ? (
           <>
-            <main className=" pt-[4rem]">
-              <h2 className=" headerText">Two-factor Authentication</h2>
+            <main className="pt-[4rem]">
+              <h2 className="headerText">Two-factor Authentication</h2>
               <span className=" flex items-center gap-4 pt-4">
                 <Switch
                   checked={auth}
@@ -242,8 +242,8 @@ const Settings = () => {
                   Enable or disable two factor authentication
                 </p>
               </span>
-              <form className=" w-full grid gap-x-4 gap-y-6  mt-[3rem] ">
-                <h1 className=" headerText pb-5">Current Password</h1>
+              <form className="w-full grid gap-x-4 gap-y-6  mt-[3rem] ">
+                <h1 className="headerText pb-5">Current Password</h1>
                 <div>
                   <p className=" pb-2 font-medium text-base">Currency</p>
                   <Input placeholder="*****" className="w-full" />

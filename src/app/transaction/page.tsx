@@ -25,7 +25,7 @@ const Transactions = () => {
 
   return (
     <section className="">
-      <div className=" py-[0.6rem] px-1 md:px-5">
+      <div className=" py-[0.6rem] px-2 md:px-5">
         <main className=" grid lg:grid-cols-12 gap-x-5 gap-y-8">
           <div className="lg:col-span-8">
             <span className=" flex justify-between items-center">

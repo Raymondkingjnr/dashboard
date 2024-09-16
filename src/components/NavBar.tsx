@@ -1,13 +1,19 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Input } from "./ui/input";
 import { BellIcon, profileImg } from "@/assests";
 import Image from "next/image";
 import { LucideSettings, MenuIcon } from "lucide-react";
+import { sideMenu } from "@/constant/menu";
+import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "./ui/drawer";
+import Link from "next/link";
 
 const NavBar = () => {
+  const [open, setOpen] = React.useState(false);
   return (
     <>
-      <div className=" hidden lg:flex justify-between bg-white items-center py-3 px-4 shadow">
+      <div className=" hidden lg:flex justify-between bg-white items-center py-3 px-2 md:px-5 shadow">
         <h2 className=" font-semibold text-base text-gray-900"></h2>
         <main className=" flex items-center gap-8">
           <Input type="text" className="w-[300px]" />
@@ -26,17 +32,41 @@ const NavBar = () => {
         </main>
       </div>
       {/* MOBILE VIEW */}
-      <div className=" lg:hidden top-0 border flex justify-between bg-white items-center p-5 ">
-        <MenuIcon size={25} />
-        <h3 className=" font-semibold text-base text-gray-900">Overview</h3>
-        <Image
-          src={profileImg}
-          alt=""
-          width={40}
-          height={40}
-          className="object-contain"
-        />
-      </div>
+      <Drawer open={open} onOpenChange={setOpen}>
+        <div className=" lg:hidden top-0 border flex justify-between bg-white items-center px-2 py-3 ">
+          <DrawerTrigger asChild>
+            <MenuIcon size={25} />
+          </DrawerTrigger>
+          <h3 className=" font-semibold text-lg text-gray-900">Overview</h3>
+          <Image
+            src={profileImg}
+            alt=""
+            width={40}
+            height={40}
+            className="object-contain"
+          />
+          <DrawerContent className=" pb-[1.3rem] bg-gray-950">
+            <main>
+              {sideMenu.map((item, index) => (
+                <DrawerClose asChild>
+                  <Link
+                    href={item.route}
+                    key={index}
+                    className="  font-medium pl-5 flex flex-col text-base gap-y-8"
+                  >
+                    <span className=" flex gap-6 pt-6">
+                      <p className=" text-gray-400 text-sm">
+                        {item.mobileIcon}
+                      </p>
+                      <p className=" text-gray-50 text-base">{item.text}</p>
+                    </span>
+                  </Link>
+                </DrawerClose>
+              ))}
+            </main>
+          </DrawerContent>
+        </div>
+      </Drawer>
     </>
   );
 };

@@ -64,7 +64,7 @@ const invoice = [
 
 const Account = () => {
   return (
-    <div className=" py-[0.6rem] px-1 md:px-5 h-full">
+    <div className=" py-[0.6rem] px-2 md:px-5 h-full">
       <div className="overflow-x-auto w-full">
         <div>
           <main className=" grid md:grid-cols-3 lg:grid-cols-4 gap-5">
