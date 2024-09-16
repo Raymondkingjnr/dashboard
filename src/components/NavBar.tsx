@@ -8,13 +8,47 @@ import { LucideSettings, MenuIcon } from "lucide-react";
 import { sideMenu } from "@/constant/menu";
 import { Drawer, DrawerClose, DrawerContent, DrawerTrigger } from "./ui/drawer";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const NavBar = () => {
   const [open, setOpen] = React.useState(false);
+  const pathname = usePathname();
+
+  // let page =""
+
+  // switch (pathname) {
+  //   case "/":
+  //     page = "Overview";
+  //     break;
+  //   case "/settings":
+  //     page = "settings";
+  //     break;
+  //   case "/transaction":
+  //     page = "transaction";
+  //     break;
+  //   case "/account":
+  //     page = "account";
+  //     break;
+  //   case "/investment":
+  //     page = "investment";
+  //     break;
+  //   case "/settings":
+  //     page = "settings";
+  //     break;
+  //   case "/settings":
+  //     page = "settings";
+  //     break;
+  //   default:
+  //     page = pathname;
+  //     break;
+  // }
   return (
     <>
       <div className=" hidden lg:flex justify-between bg-white items-center py-3 px-2 md:px-5 shadow">
-        <h2 className=" font-semibold text-base text-gray-900"></h2>
+        <h2 className=" headerText capitalize">
+          {" "}
+          {pathname?.replace(/^\/+/, "")}
+        </h2>
         <main className=" flex items-center gap-8">
           <Input type="text" className="w-[300px]" />
           <LucideSettings
@@ -37,7 +71,9 @@ const NavBar = () => {
           <DrawerTrigger asChild>
             <MenuIcon size={25} />
           </DrawerTrigger>
-          <h3 className=" font-semibold text-lg text-gray-900">Overview</h3>
+          <h3 className=" headerText capitalize">
+            {pathname?.replace(/^\/+/, "")}
+          </h3>
           <Image
             src={profileImg}
             alt=""
