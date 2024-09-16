@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React from "react";
 import { Input } from "./ui/input";
 import { BellIcon, profileImg } from "@/assests";
 import Image from "next/image";
@@ -48,10 +48,9 @@ const NavBar = () => {
           <DrawerContent className=" pb-[1.3rem] bg-gray-950">
             <main>
               {sideMenu.map((item, index) => (
-                <DrawerClose asChild>
+                <DrawerClose asChild key={index}>
                   <Link
                     href={item.route}
-                    key={index}
                     className="  font-medium pl-5 flex flex-col text-base gap-y-8"
                   >
                     <span className=" flex gap-6 pt-6">

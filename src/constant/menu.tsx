@@ -21,7 +21,6 @@ import {
   CreditCard,
   Home,
   PiggyBankIcon,
-  SaveAll,
   Send,
   Settings2Icon,
   User,
