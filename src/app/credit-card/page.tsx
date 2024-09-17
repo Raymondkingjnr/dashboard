@@ -152,7 +152,7 @@ const CreditCard = () => {
             <form
               action=""
               method="post"
-              className=" grid  gap-x-5 gap-y-8 grid-cols-2 mt-8"
+              className=" grid  gap-x-5 gap-y-8 md:grid-cols-2 mt-8"
             >
               <div>
                 <p className=" pb-2 font-medium text-base">Card Type</p>
