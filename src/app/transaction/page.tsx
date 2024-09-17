@@ -121,7 +121,7 @@ const Transactions = () => {
               />
             </span>
           </div>
-          <main className="overflow-x-auto max-w-[390px] rounded-md mx-auto md:max-w-full shadow-md sm:rounded-md mt-4">
+          <main className="overflow-x-auto max-w-[360px] rounded-md mx-auto md:max-w-full shadow-md sm:rounded-md mt-4">
             <Table className=" w-full">
               <TableCaption title="A List of all your transaction" />
               <TableHeader>
