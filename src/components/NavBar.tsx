@@ -14,40 +14,12 @@ const NavBar = () => {
   const [open, setOpen] = React.useState(false);
   const pathname = usePathname();
 
-  // let page =""
-
-  // switch (pathname) {
-  //   case "/":
-  //     page = "Overview";
-  //     break;
-  //   case "/settings":
-  //     page = "settings";
-  //     break;
-  //   case "/transaction":
-  //     page = "transaction";
-  //     break;
-  //   case "/account":
-  //     page = "account";
-  //     break;
-  //   case "/investment":
-  //     page = "investment";
-  //     break;
-  //   case "/settings":
-  //     page = "settings";
-  //     break;
-  //   case "/settings":
-  //     page = "settings";
-  //     break;
-  //   default:
-  //     page = pathname;
-  //     break;
-  // }
   return (
     <>
       <div className=" hidden lg:flex justify-between bg-white items-center py-3 px-2 md:px-5 shadow">
         <h2 className=" headerText capitalize">
           {" "}
-          {pathname?.replace(/^\/+/, "")}
+          {pathname === "/" ? "Overview" : `${pathname?.replace(/^\/+/, "")}`}
         </h2>
         <main className=" flex items-center gap-8">
           <Input type="text" className="w-[300px]" />
@@ -72,7 +44,7 @@ const NavBar = () => {
             <MenuIcon size={25} />
           </DrawerTrigger>
           <h3 className=" headerText capitalize">
-            {pathname?.replace(/^\/+/, "")}
+            {pathname === "/" ? "Overview" : `${pathname?.replace(/^\/+/, "")}`}
           </h3>
           <Image
             src={profileImg}

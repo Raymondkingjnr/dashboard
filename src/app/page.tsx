@@ -100,7 +100,7 @@ export default function Home() {
               </h2>
               <div className=" relative">
                 <Input className=" w-[200px]" />
-                <Button className=" flex items-center gap-2 bg-main_primary rounded-3xl absolute w-28 top-0 right-0">
+                <Button className=" flex items-center gap-2 bg-main_primary rounded-3xl absolute w-28 top-[2.5px] right-[2px]">
                   Send <Send size={15} />
                 </Button>
               </div>
